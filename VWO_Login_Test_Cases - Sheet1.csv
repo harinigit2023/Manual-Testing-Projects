@@ -1,0 +1,42 @@
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,Project Name,VWO Web Application,,,,,,,,
+,,Module Name,Login Page,,,,,,,,
+,,Created By,A .Harini,,,,,,,,
+,,Created Date,21/2/2025,,,,,,,,
+,,Peer Review By,Self review,,,,,,,,
+,,Peer Reviewed Date,21/2/2025,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,Scenario TID,Scenario Discription,Test Case ID, Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Misc (comments),Priority
+,SC001,Verify login with valid credentials,TC001	,User should have valid login credentials	,"1. Open VWO login page
+2. Enter valid username and password
+3. Click ""Login""",User should be logged in successfully,,Pass,A.Harini,,High
+,SC002,Verify login with invalid credentials,TC002,User should have an invalid password,"1. Open VWO login page
+2. Enter valid username and incorrect password
+3. Click ""Login""",Error message should be displayed,,Pass,A.Harini,,High
+,SC003,Verify login with blank credentials,TC003,No input provided,"1. Open VWO login page
+2. Click ""Login"" without entering any credentials","""Username and password required"" error message should be displayed",,Pass,A.Harini,,High
+,SC004,Verify login with only username entered,TC004,User enters only a username,"1. Open VWO login page
+2. Enter valid username but leave password blank
+3. Click ""Login""","""Password required"" error message should be displayed",,Pass,A.Harini,,Medium
+,SC005,Verify login with only password entered,TC005,User enters only a password,"1. Open VWO login page
+2. Leave username blank and enter password
+3. Click ""Login""","""Username required"" error message should be displayed",,Pass,A.Harini,,Medium
+,SC006,Verify login with case-sensitive username,TC006,User enters username in different case,"1. Open VWO login page
+2. Enter username in uppercase/lowercase
+3. Enter correct password
+4. Click ""Login""",Should display a case-sensitive error if applicable,,Pass,A.Harini,,Low
+,SC007,Verify login with special characters in username/password,TC007,User enters special characters      ,"1. Open VWO login page
+2. Enter username/password with special characters
+3. Click ""Login""",Should handle special characters appropriately,,Pass,A.Harini,,Medium
+,SC008,Verify login with SQL Injection attempt,TC008,User enters SQL query as input       ,"1. Open VWO login page
+2. Enter admin' -- or similar SQL injection attempt
+3. Click ""Login""",System should not allow SQL injection,,Pass,A.Harini,,High
+,SC009,Verify login with slow internet connection,TC009,User has poor network speed,"1. Simulate slow network
+2. Try logging in",Login should handle slow connections properly,,Pass,A.Harini,,Medium
+,SC010,Verify login on different browsers,TC010,User logs in from different browsers,"1. Open VWO login page on Chrome, Firefox, Edge, Safari
+2. Enter valid credentials and log in",User should log in successfully on all supported browsers,,Pass,A.Harini,,High

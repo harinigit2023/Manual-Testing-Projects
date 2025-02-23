@@ -1,0 +1,50 @@
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,Project Name,Job Application Portal,,,,,,,,
+,,Module Name,User Registration Functionality,,,,,,,,
+,,Created By,A.Harini,,,,,,,,
+,,Created Date,23/2/2025,,,,,,,,
+,,Peer Review By,Self Review,,,,,,,,
+,,Peer Reviewed Date,23/2/2025,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,,UR_001,Validate successful registration with valid details,TC_UR_001,User is on the registration page,"1. Enter valid details (Name, Email, Password, Phone)
+2. Click ""Register""
+3. Verify email","Registration successful, user receives verification email",,pass/fail,A.Harini,High
+,,UR_002,Validate registration with an existing email,TC_UR_002,User is on the registration page,"1. Enter an already registered email
+2. Click ""Register""","Error message: ""Email already exists""",,pass/Fail,A.Harini,High
+,,UR_003	,Check password validation rules,TC_UR_003	,User is on the registration page,"1. Enter a weak password (e.g., ""1234"")
+2. Click ""Register""","Error message: ""Password must be at least 8 characters with letters, numbers, and symbols""",,Pass/Fail,A.Harini,High
+,,UR_004,Validate phone number format,TC_UR_004,User is on the registration page,"1. Enter an invalid phone number (e.g., 123)
+2. Click ""Register""","Error message: ""Enter a valid phone number""",,Pass/Fail,A.Harini,Medium
+,,UR_005,Check mandatory field validation,TC_UR_005,User is on the registration page,"1. Leave required fields blank
+2. Click ""Register""",Error messages appear for missing fields,,Pass/Fail,A.Harini,High
+,,UR_006,Validate email verification process,TC_UR_006,User has successfully registered,"1. Check email for verification link
+2. Click the link","Email verified, account activated",,Pass/Fail,A.Harini,High
+,,UR_007,Check duplicate phone number registration,TC_UR_007,User is on the registration page,"1. Enter an already registered phone number
+2. Click ""Register""","Error message: ""Phone number already registered""",,Pass/Fail,A.Harini,Medium
+,,UR_008,Boundary Testing: Maximum character limit for Name field,TC_UR_008,User is on the registration page,"1. Enter a long name (e.g., 100+ characters)
+2. Click ""Register""","Error message: ""Name should not exceed 50 characters""",,Pass/Fail,A.Harini,Low
+,,UR_009,Boundary Testing: Minimum & Maximum Password Length,TC_UR_009,User is on the registration page,"1. Enter a short password (2 chars)
+2. Enter a very long password (50+ chars)",Error messages for invalid lengths,,Pass/Fail,A.Harini,High
+,,UR_010,Security Test: SQL Injection Prevention,TC_UR_010,User is on the registration page,"1. Enter SQL query in fields (' OR '1'='1)
+2. Click ""Register""",Input is sanitized; no SQL execution,,Pass/Fail,A.Harini,Critical
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,UI/UX Test Cases,,,,,,,,,
+,,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,,UI_001,Check field alignment on different screen sizes,TC_UI_001,Open registration page on desktop and mobile,Resize the screen and check UI responsiveness,UI elements remain aligned and readable,,Pass/Fail,A.Harini,High
+,,UI_002,Validate placeholder text in input fields	,TC_UI_002,User is on registration page,Check all fields for correct placeholder text,Placeholder text should guide user correctly,,Pass/Fail,A.Harini,Medium
+,,UI_003,Check button color and hover effect,TC_UI_003,User is on registration page,"Hover over the ""Register"" button",Button color should change slightly to indicate interactivity	,,Pass/Fail,A.Harini,Low
+,,UI_004,Validate error message visibility,TC_UI_004,Leave a required field blank,"Click ""Register"" and check if error message is visible",Error message should be clearly visible in red,,Pass/Fail,A.Harini,High
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,Performance Test Cases,,,,,,,,
+,,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,,PERF_001,Load Testing: Registering multiple users at once,TC_PERF_001,1000+ concurrent users trying to register,Simulate load with testing tools (JMeter),System should handle 1000+ registrations smoothly,,Pass/Fail,A.Harini,High
+,,PERF_002,Check registration form load time,TC_PERF_002,Open registration page,Measure page load time,Page should load in under 2 seconds,,Pass/Fail,A.Harini,High
+,,PERF_003,Validate registration response time,TC_PERF_003,Submit form with valid data,Measure time to process request and get response,Registration should be completed within 3 seconds,,Pass/Fail,A.Harini,Medium

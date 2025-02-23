@@ -1,0 +1,23 @@
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,Project Name,VWO Login Page,,,,,,,
+,,Module Name, Free Trial Functionality,,,,,,,
+,,Created By,A.Harini,,,,,,,
+,,Created Date,23/2/2025,,,,,,,
+,,Peer Review By:,self review,,,,,,,
+,,Peer Reviewed Date,23/2/2025,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,,FT_001,Verify Free Trial signup with valid details,TC_FT_001	,User is on the Free Trial page,"1. Enter valid Name, Email, and Password 2. Click on ""Start Free Trial""",User should be successfully registered and redirected to the dashboard,pass,A.Harini,high
+,,FT_002,Verify Free Trial signup with an already registered email,TC_FT_002,User is on the Free Trial page,"1. Enter an email that is already registered 2. Click on ""Start Free Trial""","Error message: ""Email is already in use"" should be displayed",pass,A.Harini,high
+,,FT_003,Verify Free Trail signup with an invalid email format,TC_FT_003	,User is on the Free Trial page,"1. Enter an invalid email (e.g., ""user@com"") 2. Click ""Start Free Trial""","System should show an error message: ""Enter a valid email address""",pass,A.Harini,Medium
+,,FT_004,Verify Free Trial signup with a weak password,TC_FT_004,User is on the Free Trial page,"1. Enter a weak password (e.g., ""12345"") 2. Click ""Start Free Trial""","System should display an error: ""Password must be at least 8 characters with a mix of letters, numbers, and symbols""",pass,A.Harini,High
+,,FT_005,Verify Free Trial signup without accepting Terms & Conditions,TC_FT_005,User is on the Free Trial page,"1. Enter valid details 2. Leave ""Terms & Conditions"" unchecked 3. Click ""Start Free Trial""","Error message: ""Please accept Terms & Conditions"" should appear",pass,A.Harini,Medium
+,,FT_006,Boundary Test: Verify Free Trial signup with minimum allowed password length,TC_FT_006,User is on the Free Trial page,"1. Enter a password of exactly 8 characters 2. Click ""Start Free Trial""",User should be successfully registered,pass,A.Harini,High
+,,FT_007,Boundary Test: Verify Free Trial signup with maximum allowed password length,TC_FT_007,User is on the Free Trial page,"1. Enter a password of exactly 20 characters 2. Click ""Start Free Trial""",User should be successfully registered,pass,A.Harini,High
+,,FT_008,Verify Free Trial signup with blank fields,TC_FT_008,User is on the Free Trial page,"1. Leave all fields blank 2. Click ""Start Free Trial""",System should show error messages for required fields,pass,A.Harini,High
+,,FT_009,Verify system behavior when network disconnects during signup,TC_FT_009,User is on the Free Trial page,"1. Enter valid details 2. Turn off the internet 3. Click ""Start Free Trial""",System should display an appropriate error message,pass,A.Harini,Medium
+,,FT_010,Verify email confirmation after Free Trial signup,TC_FT_010	,User has completed signup,1. Check the registered email inbox 2. Click on the verification link,User should be redirected to a confirmation page and account should be activated,pass,A.Harini,High

@@ -1,0 +1,18 @@
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,Project Name,Job Application Portal,,,,,,,,
+,,Module Name, Logout Functionality,,,,,,,,
+,,Created By,A.Harini,,,,,,,,
+,,Created Date,23/2/2025,,,,,,,,
+,,Peer Review By,Self Review,,,,,,,,
+,,Peer Reviewed Date,23/2/2025,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,,LOG-01,Verify successful logout,TC_LOG_01,User is logged in,Click on the logout button,User should be logged out and redirected to the login page,,Pass/Fail,A.Harini,High
+,,LOG-02,Verify session expiration after logout,TC_LOG_02,User is logged in and clicks logout,Try navigating back using the browser back button,User should not be able to access the previous session,,Pass/Fail,A.Harini,High
+,,LOG-03,Verify logout from multiple devices,TC_LOG_03,User is logged in from multiple devices,Logout from one device and check access on another,User should be logged out from all devices or get a session expired message,,Pass/Fail,A.Harini,Medium
+,,LOG-04,Verify UI/UX of the logout button,TC_LOG_04,User is on the dashboard,Check if the logout button is easily visible and accessible,Logout button should be clearly visible and correctly positioned	,,Pass/Fail,A.Harini,Medium
+,,LOG-05,Verify logout under high traffic conditions,TC_LOG_05,Multiple users are active on the portal,Simulate logging out under high server load,Logout should work seamlessly without delays,,Pass/Fail,A.Harini,Low
+,,LOG-06,Verify logout with slow network connection,TC_LOG_06,User is logged in on a slow network,Click logout and monitor response time,"Logout should still work properly, with an appropriate message if delayed",,Pass/Fail,A.Harini,Low

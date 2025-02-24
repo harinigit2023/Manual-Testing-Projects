@@ -1,0 +1,29 @@
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,Project Name,Instagram Profile Management,,,,,,,
+,,Module Name,Profile Update Functionality,,,,,,,
+,,Created By,A.Harini,,,,,,,
+,,Created Date,24/2/2025,,,,,,,
+,,Peer Review By,A.Harini,,,,,,,
+,,Peer Review Date,24/2/2025,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,IP-01,Verify that the user can successfully update their profile name,TC_IP_01,User is logged into their Instagram account and on the profile edit page,"Change the profile name and click ""Save""",Profile name should be updated successfully,,pass/Fail,A.Harini,High
+,IP-02,Verify that the user can successfully update their username,TC_IP_02,User is logged in and on the profile edit page,"Change the username and click ""Save""","Username should be updated if available; otherwise, an error should be shown",,pass/Fail,A.Harini,High
+,IP-03,Verify that the user can successfully update their bio,TC_IP_03,User is logged in and on the profile edit page,"Edit the bio and click ""Save""",Updated bio should be visible on the profile page,,pass/Fail,A.Harini,High
+,IP-04,Verify that the user can successfully update their profile picture,TC_IP_04,User is logged in and on the profile edit page,"Click ""Change Profile Picture,"" select a valid image, and save",Profile picture should be updated successfully,,pass/Fail,A.Harini,High
+,IP-05,Verify validation messages for username when using special characters	,TC_IP_05,User is on the profile edit page,Enter a username with special characters (*&^%) and save,"System should show an error message stating ""Invalid username format""",,pass/Fail,A.Harini,High
+,IP-06,Verify email update and validation process,TC_IP_06,User is logged in and on the profile edit page,Change the email address and save,A verification email should be sent; update should be completed after verification,,pass/Fail,A.Harini,High
+,IP-07,Verify that the user cannot update their profile with an already existing username,TC_IP_07,User is logged in and on the profile edit page,Enter a username that is already taken and save,"System should display an error message ""Username is already taken""",,Pass/Fail,A.Harini,High
+,IP-08,Verify password update functionality,TC_IP_08,User is logged in and on the profile settings page,"Enter the old password, new password, confirm new password, and save","Password should be updated successfully, and the user should be prompted to log in again",,Pass/Fail,A.Harini,High
+,IP-09,Verify updating multiple fields at once,TC_IP_09,User is on the profile edit page,"Change name, username, bio, and profile picture together and save",All changes should be updated successfully,,Pass/Fail,A.Harini,High
+,IP-10,Verify UI/UX – Buttons and labels should be properly visible,TC_IP_10,User is on the profile edit page,"Check the alignment and visibility of buttons, input fields, and messages",All UI elements should be properly aligned and readable,,Pass/Fail,A.Harini,Medium
+,IP-11,Verify the character limit for the bio field,TC_IP_11,User is on the profile edit page,Enter a bio longer than 150 characters and save,System should restrict input and show an error message,,Pass/Fail,A.Harini,Medium
+,IP-12,Verify the file format validation for profile picture upload,TC_IP_12,User is on the profile edit page,"Try uploading an unsupported file format (e.g., .exe, .pdf)",System should show an appropriate error message,,Pass/Fail,A.Harini,Medium
+,IP-13,Verify boundary value – Minimum & maximum username length,TC_IP_13,User is on the profile edit page,"Enter a username with the minimum (e.g., 3 chars) and maximum allowed length (e.g 30 chars)",System should accept usernames within the defined range,,Pass/Fail,A.Harini,High
+,IP-14,Verify response when the user tries to update the profile with an invalid email format,TC_IP_14,User is on the profile edit page,"Enter an invalid email (e.g ""test@com"") and save",System should show a validation error,,Pass/Fail,A.Harini,High
+,IP-15,Verify performance – Profile update under high server load,TC_IP_15,Multiple users are simultaneously updating profiles,Simulate multiple profile updates at the same time,System should respond smoothly without delays,,Pass/Fail,A.Harini,low
+,IP-16,Verify the session timeout when updating the profile,TC_IP_16,User is logged in for a long time,Try updating the profile after session timeout,System should prompt the user to log in again,,Pass/Fail,A.Harini,Medium
+,IP-17,Verify changes are reflected in the user’s Instagram profile,TC_IP_17,Profile update was successful,Go to the user’s profile and check the updated details,Changes should reflect correctly on the profile page,,Pass/Fail,A.Harini,High

@@ -1,0 +1,23 @@
+,,,,,,,,,,
+,,,,,,,,,,
+,,Project Name,Instagram Profile Management,,,,,,,
+,,Module Name, Two-Factor Authentication (2FA),,,,,,,
+,,Created By,A.Harini,,,,,,,
+,,Created Date,25/2/2025,,,,,,,
+,,Peer Review By,A.Harini,,,,,,,
+,,Peer Review Date,25/2/2025,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,2FA-01,Verify that an OTP is sent when the user attempts to log in with 2FA enabled,TC_2FA_01,User has enabled 2FA in settings,Enter valid credentials and attempt login,The system should send a 6-digit OTP via SMS/email,,Pass/Fail,A.Harini,High
+,2FA-02,Verify that the OTP is received within the expected time frame,TC_2FA_02,User has requested an OTP,Wait for OTP arrival,OTP should be received within 30-60 seconds,,Pass/Fail,A.Harini,High
+,2FA-03,Verify validation for an incorrect OTP,TC_2FA_03,User is on the OTP entry page,Enter alphabets or special characters,"System should display an error message ""Only numbers are allowed""",,Pass/Fail,A.Harini,High
+,2FA-04,Verify validation for an incorrect OTP,TC_2FA_04,User is on the OTP entry page,Enter an incorrect OTP and submit,"System should display an error ""Invalid OTP, please try again""",,Pass/Fail,A.Harini,High
+,2FA-05	,Verify validation for an expired OTP,TC_2FA_05,User has received an OTP,Enter the OTP after the expiration time (e.g 5 minutes),"System should display an error ""OTP expired, request a new OTP""",,Pass/Fail,A.Harini,High
+,2FA-06,Verify user is allowed limited attempts to enter OTP,TC_2FA_06,User is on the OTP entry page,Enter incorrect OTP multiple times (e.g 5 attempts),"System should lock further attempts for a period (e.g., 5 mins) and display a message ""Too many attempts, try again later""",,Pass/Fail,A.Harini,High
+,2FA-08,Verify that the newly generated OTP invalidates the previous one,TC_2FA_08,User has requested a new OTP,Try entering the old OTP after requesting a new one,The system should reject the old OTP and only accept the latest one,,Pass/Fail,A.Harini,High
+,2FA-09,Verify that the OTP is auto-filled (if applicable),TC_2FA_09,User receives an OTP on a mobile device with autofill support,Check if OTP is auto-filled in the input field,OTP should be automatically populated,,Pass/Fail,A.Harini,Medium
+,2FA-10,"Verify that after OTP verification, the user is successfully logged in",TC_2FA_10,User has entered the correct OTP,Submit OTP and check login status,User should be successfully logged in and redirected to the home screen,,Pass/Fail,A.Harini,High
+,2FA-11,Verify UI/UX – OTP input field formatting,TC_2FA_11,User is on the OTP entry page,"Check UI elements like spacing, box alignment, and font size",OTP fields should be properly aligned and readable,,Pass/Fail,A.Harini,High
+,2FA-12,"Verify UI/UX – ""Resend OTP"" button disabled for a few seconds",TC_2FA_12,User is on the OTP entry page,"Click ""Resend OTP"" repeatedly",The button should be disabled for 30 seconds to prevent abuse,,Pass/Fail,A.Harini,Medium
+,2FA-13,Verify performance – OTP delivery under heavy load,TC_2FA_13	,Multiple users are requesting OTPs at the same time,Measure OTP delivery time,The system should deliver OTPs within the expected timeframe,,Pass/Fail,A.Harini,Low

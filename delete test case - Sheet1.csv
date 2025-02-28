@@ -1,0 +1,27 @@
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,Project Name,Instagram Profile Management,,,,,,,
+,,Module Name,Delete Account,,,,,,,
+,,Created By,A.Harini,,,,,,,
+,,Created Date,28/2/2025,,,,,,,
+,,Peer Review By,A.Harini,,,,,,,
+,,Peer Review Date,28/2/2025,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,DEL-01,"Verify that the ""Delete Account"" option is available in settings",TC_DEL_01,User is logged into the account,Navigate to Settings > Account > Delete Account,The option to delete the account should be visible,,Pass/Fail,A.Harini,High
+,DEL-02,Verify that the user receives a confirmation prompt before deleting the account,TC_DEL_02,"User clicks on ""Delete Account""","A confirmation popup should appear with options: ""Cancel"" and ""Delete""",User should be prompted to confirm before deletion,,Pass/Fail,A.Harini,High
+,DEL-03,"Verify that clicking ""Cancel"" on the confirmation popup does not delete the account",TC_DEL_03	,Confirmation popup is displayed,"Click on ""Cancel""","The account should remain active, and the user should be redirected to settings",,Pass/Fail,A.Harini,High
+,DEL-04,"Verify that clicking ""Delete"" proceeds with account deletion",TC_DEL_04,Confirmation popup is displayed,"Click on ""Delete""","The account should be permanently deleted, and the user should be logged out",,Pass/Fail,A.Harini,High
+,DEL-05,Verify that the user is prompted to enter their password before account deletion,TC_DEL_05	,User is deleting the account,Enter the correct password and confirm deletion,The system should validate the password before proceeding,,Pass/Fail,A.Harini,High
+,DEL-06,Verify that entering an incorrect password prevents account deletion,TC_DEL_06,User is deleting the account,Enter an incorrect password and confirm deletion,"The system should show an error ""Incorrect password. Try again.""",,Pass/Fail,A.Harini,High
+,DEL-07,Verify that all user data is removed from the system upon successful account deletion,TC_DEL_07,Account is deleted,Try logging in with the deleted account credentials,"The system should show ""Account not found""	",,Pass/Fail,A.Harini,High
+,DEL-08	,"Verify that user-generated content (posts, comments, messages) is deleted",TC_DEL_08,Account is deleted,Search for posts/comments from the deleted user,The user's content should no longer be visible,,Pass/Fail,A.Harini,High
+,DEL-09,Verify that followers/following lists no longer contain the deleted account,TC_DEL_09,Account is deleted,Check follower/following lists of other users,The deleted user's profile should no longer appear in any lists,,Pass/Fail,A.Harini,High
+,DEL-10,Verify that a deactivated account can be recovered within a specific period (if applicable),TC_DEL_10	,User requests account deletion,"Attempt login within the recovery period (e.g., 30 days)",The system should allow reactivation if within the grace period,,Pass/Fail,A.Harini,Medium
+,DEL-11,Verify that deleted accounts cannot be recovered after the grace period,TC_DEL_11	,Account has been deleted after the recovery period,Attempt to log in after 30 days,"The system should show ""Account permanently deleted""",,Pass/Fail,A.Harini,High
+,DEL-12,Verify UI/UX – Proper warning messages before deletion,TC_DEL_12	,User is on the deletion confirmation screen,Check the text of the warning message,The message should clearly warn about data loss and permanence,,Pass/Fail,A.Harini,Medium
+,DEL-13	,"Verify UI/UX – ""Delete Account"" button is not too easily clickable to prevent accidental deletion",TC_DEL_13,User is on the deletion confirmation screen,Check the button placement and clickability,The button should not be placed near frequently used buttons,,Pass/Fail,A.Harini,Medium
+,DEL-14,Verify performance – Account deletion process under high user load,TC_DEL_14,Multiple users are deleting accounts at the same time,Measure the deletion process speed,The system should process deletions without delay,,Pass/Fail,A.Harini,Low

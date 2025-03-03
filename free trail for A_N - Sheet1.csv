@@ -1,0 +1,23 @@
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Project Name,Amazon Prime/Netflix Subscription,,,,,,,,
+,Module Name,Free Trial Functionality,,,,,,,,
+,Created By,A.Harini,,,,,,,,
+,Created Date,3/3/2025,,,,,,,,
+,Peer Review By,A.Harini,,,,,,,,
+,Peer Review Date,3/3/2025,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,FT-001,Verify user can successfully start a free trial,TC-FT-001,User must have a valid account,"1. Navigate to the subscription page 2. Click on ""Start Free Trial"" 3. Enter payment details 4. Click ""Confirm""",Free trial starts successfully,,Pass/Fail,A.Harini,High
+,FT-002,Verify if the system prompts for payment details before starting a free trial,TC-FT-002,User must not have an active subscription,"1. Click on ""Start Free Trial"" 2. Skip entering payment details","System should prompt ""Enter payment details to proceed""",,Pass/Fail,A.Harini,High
+,FT-003,Verify if free trial expiration triggers an automatic charge,TC-FT-003,User has entered valid payment details,1. Wait for the free trial period to expire 2. Check if the amount is deducted,Amount should be deducted automatically,,Pass/Fail,A.Harini,High
+,FT-004,Verify if the user can cancel the free trial before it expires,TC-FT-004,User has an active free trial,"1. Navigate to Subscription Settings 2. Click ""Cancel Free Trial"" 3. Confirm cancellation","Free trial should be canceled, and no charge should be applied",,Pass/Fail,A.Harini,Medium
+,FT-005,Verify the behavior when entering an invalid payment method,TC-FT-005,User has an expired credit card,"1. Enter invalid card details 2. Click ""Start Free Trial""","Error message should appear: ""Invalid payment method""",,Pass/Fail,A.Harini,High
+,FT-006,Verify if the free trial is available again after cancellation,TC-FT-006,User has already used a free trial,1. Try to start a free trial again,"System should display ""Free trial is available only once per user""",,Pass/Fail,A.Harini,Medium
+,FT-007,Verify the boundary condition for free trial duration,TC-FT-007,Free trial ends at midnight,1. Track the free trial expiration time 2. Check account status at 11:59 PM and 12:01 AM,Free trial should be active until 11:59 PM and convert to paid after 12:00 AM,,Pass/Fail,A.Harini,High
+,FT-008,Verify UI elements on the free trial page,TC-FT-008,,"1. Check the ""Start Free Trial"" button 2. Verify subscription terms are visible 3. Ensure payment options are correctly displayed",All UI elements should be correctly visible,,Pass/Fail,A.Harini,High
+,FT-009,Verify error handling for payment failure during free trial activation,TC-FT-009,User has insufficient balance,"1. Enter card details with no balance 2. Click ""Start Free Trial""","System should display ""Payment failed. Please use another method.""",,Pass/Fail,A.Harini,High

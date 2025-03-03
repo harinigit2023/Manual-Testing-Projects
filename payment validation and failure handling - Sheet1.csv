@@ -1,0 +1,38 @@
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Project Name,Payment Processing,,,,,,,,
+,Module Name,Card Payment Validation & Failure Handling,,,,,,,,
+,Created By,A.Harini,,,,,,,,
+,Created Date,3/3/2025,,,,,,,,
+,Peer Review By,A.Harini,,,,,,,,
+,Peer Review Date,3/3/2025,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,TC_001,Validate payment with a valid card,PAY_001	,User has a valid card with sufficient balance,"1. Navigate to the payment page
+2. Enter valid card details
+3. Click ""Pay Now""","Payment should be successful, and an order confirmation should be displayed",,Pass/Fail,A.Harini,High
+,TC_002,Validate payment with an expired card,PAY_002,User enters an expired card,"1. Enter an expired card number
+2. Click ""Pay Now""","System should show an error: ""Your card is expired""",,Pass/Fail,A.Harini,High
+,TC_003,Validate payment with an invalid card number,PAY_003,User enters a random invalid card number,"1. Enter an invalid card number
+2. Click ""Pay Now""","System should show an error: ""Invalid card number""",,Pass/Fail,A.Harini,High
+,TC_004	,Validate payment with insufficient funds,PAY_004	,User enters a valid card with low balance,"1. Enter valid card details
+2. Click ""Pay Now""","System should decline payment and display: ""Insufficient funds""",,Pass/Fail,A.Harini,High
+,TC_005	,Validate payment with an incorrect CVV,PAY_005	,User enters an incorrect CVV,"1. Enter a valid card number with an incorrect CVV
+2. Click ""Pay Now""","System should display: ""Invalid CVV""",,Pass/Fail,A.Harini,High
+,TC_006,Validate session timeout during payment,PAY_006,User leaves payment page idle for a long time,"1. Start entering card details
+2. Leave the page idle for X minutes
+3. Try to submit payment",System should expire the session and require re-authentication,,Pass/Fail,A.Harini,Medium
+,TC_007	,Validate payment failure due to network issue,PAY_007,Internet connection is unstable,"1. Disable the internet connection after entering card details
+2. Click ""Pay Now""","System should display: ""Payment failed due to network error"" and allow retry",,Pass/Fail,A.Harini,High
+,TC_008,Validate OTP verification for card payment,PAY_008,Bank OTP is required for transaction,"1. Enter valid card details
+2. Submit payment
+3. Enter correct OTP",Payment should be successful,,Pass/Fail,A.Harini,High
+,TC_009,Validate incorrect OTP entry,PAY_009,User enters wrong OTP,"1. Enter valid card details
+2. Submit payment
+3. Enter incorrect OTP","System should display: ""Incorrect OTP, please try again""",,Pass/Fail,A.Harini,High
+,TC_010,Validate retry option for failed payment,PAY_010,Payment fails due to network issue,"1. Try to make payment
+2. Disconnect internet mid-payment
+3. Reconnect and check retry option",System should allow retrying the payment,,Pass/Fail,A.Harini,Medium

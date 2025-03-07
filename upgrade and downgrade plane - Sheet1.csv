@@ -1,0 +1,45 @@
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Project Name,Payment Processing,,,,,,,,
+,Module Name,Subscription Upgrade/Downgrade & Renewal Process,,,,,,,,
+,Created By,A.Harini,,,,,,,,
+,Created Date,7/3/2025,,,,,,,,
+,Peer Review By,A.Harini,,,,,,,,
+,Peer Review Date,7/3/2025,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,SM-001,Upgrade from Basic to Standard Plan,TC-SM-001,User must have an active Basic plan,"1. Navigate to Account settings
+2. Click on ""Change Plan""
+3. Select ""Standard"" Plan
+4. Confirm upgrade and make payment",Subscription upgraded successfully,,Pass/Fail,A.Harini,High
+,SM-002,Upgrade from Standard to Premium Plan,TC-SM-002,User must have an active Standard plan,"1. Navigate to Account settings
+2. Click on ""Change Plan""
+3. Select ""Premium"" Plan
+4. Confirm upgrade and make payment",Subscription upgraded successfully,,Pass/Fail,A.Harini,High
+,SM-003,Downgrade from Premium to Standard Plan,TC-SM-003,User must have an active Premium plan,"1. Navigate to Account settings
+2. Click on ""Change Plan""
+3. Select ""Standard"" Plan
+4. Confirm downgrade",Subscription downgraded successfully,,Pass/Fail,A.Harini,Medium
+,SM-004,Downgrade from Standard to Basic Plan,TC-SM-004,User must have an active Standard plan,"1. Navigate to Account settings
+2. Click on ""Change Plan""
+3. Select ""Basic"" Plan
+4. Confirm downgrade",Subscription downgraded successfully,,Pass/Fail,A.Harini,Medium
+,SM-005,Auto-Renewal of Subscription,TC-SM-005,User has an active plan with auto-renewal enabled,"1. Wait for the billing cycle to end
+2. Ensure auto-renewal is ON
+3. Check for automatic payment processing",Subscription renewed successfully,,Pass/Fail,A.Harini,High
+,SM-006,Manual Renewal of Subscription,TC-SM-006,User has an expired or expiring subscription,"1. Navigate to Account settings
+2. Click on ""Renew Subscription""
+3. Select payment method and confirm",Subscription renewed successfully,,Pass/Fail,A.Harini,High
+,SM-007,Renewal with Expired Card,TC-SM-007,User has an expired card as payment method,"1. Wait for auto-renewal attempt
+2. System tries to charge expired card",Payment fails and prompts user to update card details,,Pass/Fail,A.Harini,High
+,SM-008,Cancellation of Subscription Before Renewal,TC-SM-008,User has an active plan,"1. Navigate to Account settings
+2. Click on ""Cancel Subscription""
+3. Confirm cancellation",Subscription set to cancel at the end of billing cycle,,Pass/Fail,A.Harini,Medium
+,SM-009,Retry Payment on Renewal Failure,TC-SM-009,Previous renewal attempt failed,"1. Navigate to Account settings
+2. Click on ""Retry Payment""
+3. Enter new payment method
+4. Confirm payment","Payment successful, subscription renewed",,Pass/Fail,A.Harini,High
+,SM-010,Notification for Expiring Subscription,TC-SM-010,User has a subscription expiring within 7 days,"1. Wait for system notification email/SMS
+2. Check user notifications in the account",User receives renewal reminder notification,,Pass/Fail,A.Harini,Medium

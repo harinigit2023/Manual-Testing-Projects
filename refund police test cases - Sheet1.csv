@@ -1,0 +1,42 @@
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Project Name,Payment Processing,,,,,,,,
+,Module Name,Subscription Upgrade/Downgrade & Renewal Process,,,,,,,,
+,Created By,A.Harini,,,,,,,,
+,Created Date,7/3/2025,,,,,,,,
+,Peer Review By,A.Harini,,,,,,,,
+,Peer Review Date,7/3/2025,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,RC-001,Request refund within eligible time limit (like within 7 days),TC-RC-001,User has an active subscription within refund eligibility period,"1. Navigate to Account settings
+2. Click on ""Cancel & Request Refund""
+3. Select reason for refund
+4. Confirm refund request",Refund request submitted successfully	,,Pass/Fail,A.Harini,High
+,RC-002,Request refund after eligible time limit (like after 7 days),TC-RC-002,User's subscription exceeds refund eligibility period,"1. Navigate to Account settings
+2. Click on ""Cancel & Request Refund""
+3. Select reason for refund
+4. Confirm refund request","System should display a message stating ""Refund not available after 7 days""",,Pass/Fail,A.Harini,High
+,RC-003,Cancellation of subscription before the end of billing cycle,TC-RC-003,User has an active subscription,"1. Navigate to Account settings
+2. Click on ""Cancel Subscription""
+3. Confirm cancellation",Subscription marked for cancellation at the end of the billing cycle,,Pass/Fail,A.Harini,Medium
+,RC-004,Cancellation of subscription with an immediate refund,TC-RC-004,User has an active subscription and is within refund policy timeframe,"1. Navigate to Account settings
+2. Click on ""Cancel & Request Refund""
+3. Confirm request",Subscription canceled and refund initiated,,Pass/Fail,A.Harini,High
+,RC-005,Refund processing time validation,TC-RC-005,User has requested a refund successfully,"1. Submit refund request
+2. Check estimated refund processing time
+3. Track refund status","System displays ""Refund will be processed within 7 days""",,Pass/Fail,A.Harini,Medium
+,RC-006,Refund amount verification for partial usage,TC-RC-006,User has used the service partially (like watched content for 3 out of 30 days),"1. Navigate to Account settings
+2. Request a refund
+3. Verify calculated refund amount",Refund amount should be based on the unused days,,Pass/Fail,A.Harini,High
+,RC-007,Refund request via customer support,TC-RC-007,User contacts customer support for refund,"1. Initiate chat/call with support
+2. Request refund manually
+3. Verify support response",Support should provide refund details and initiate the process,,Pass/Fail,A.Harini,Medium
+,RC-008,Refund request for different payment methods,TC-RC-008	,User has paid via Credit Card/UPI/Wallet,"1. Request refund
+2. Verify refund method used for each payment type",Refund should be processed back to the original payment method,,Pass/Fail,A.Harini,High
+,RC-009,Notification for successful refund,TC-RC-009,User has requested a refund and it is processed,"1. Submit refund request
+2. Wait for processing
+3. Check email/notification updates",User receives confirmation that the refund has been processed,,Pass/Fail,A.Harini,Medium
+,RC-010,Attempting refund for a promotional/free trial subscription,TC-RC-010,User has a free trial or discounted subscription,"1. Navigate to refund request section
+2. Attempt refund request","System should display ""Refunds are not applicable for free trial/promo offers""",,Pass/Fail,A.Harini,High

@@ -1,0 +1,28 @@
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Project Name,GitHub Dashboard,,,,,,,,
+,Module Name,Dashboard Navigation,,,,,,,,
+,Created By,A.Harini,,,,,,,,
+,Created Date,12/3/2025,,,,,,,,
+,Peer Review By,A.Harini,,,,,,,,
+,Peer Review Date,12/3/2025,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,GH-DN-001,"Verify that clicking on the ""Repositories"" tab displays the repositories list",TC-GH-DN-001,User is logged into GitHub,"1. Click on ""Repositories"" in the sidebar.",The user's repositories list should be displayed.,,Pass/Fail,A.Harini,High
+,GH-DN-002,"Verify that clicking on the ""Pull Requests"" tab displays open PRs",TC-GH-DN-002	,User is logged into GitHub,"1. Click on ""Pull Requests"" in the sidebar.",The open pull requests page should load.,,Pass/Fail,A.Harini,High
+,GH-DN-003,"Verify that clicking on the ""Issues"" tab displays reported issues",TC-GH-DN-003,User is logged into GitHub,"1. Click on ""Issues"" in the sidebar.",The open issues page should load.,,Pass/Fail,A.Harini,High
+,GH-DN-004,"Verify that clicking on ""Explore"" navigates to trending repositories",TC-GH-DN-004,User is logged into GitHub,"1. Click on ""Explore"" from the navigation menu.",The trending repositories page should load.,,Pass/Fail,A.Harini,Medium
+,GH-DN-005,"Verify that clicking on ""Settings"" navigates to the account settings page",TC-GH-DN-005,User is logged into GitHub,"1. Click on the user avatar.
+2. Select ""Settings"".",The account settings page should load.,,Pass/Fail,A.Harini,High
+,GH-DN-006,Verify that clicking on a repository name redirects to the repository page,TC-GH-DN-006,User has at least one repository,1. Click on any repository name from the dashboard.,The repository page should open,,Pass/Fail,A.Harini,High
+,GH-DN-007,"Verify that clicking on the ""New Repository"" button navigates to the repository creation page",TC-GH-DN-007,User is logged into GitHub,"1. Click on ""New Repository"" from the dashboard.",The repository creation page should open.,,Pass/Fail,A.Harini,High
+,GH-DN-008,Verify that clicking on the notifications icon opens the notifications panel,TC-GH-DN-008,User is logged into GitHub,1. Click on the notifications icon (bell icon).,The notifications panel should display recent notifications.,,Pass/Fail,A.Harini,Medium
+,GH-DN-009,"Verify that clicking on ""Your Profile"" navigates to the profile page",TC-GH-DN-009,User is logged into GitHub,"1. Click on the user avatar.
+2. Select ""Your Profile"".",The user's profile page should load.,,Pass/Fail,A.Harini,Medium
+,GH-DN-010,Verify breadcrumb navigation within a repository,TC-GH-DN-010,User is inside a repository,"1. Navigate deep into a repository directory.
+2. Click on each breadcrumb link at the top.",The user should be navigated to the correct previous directories.,,Pass/Fail,A.Harini,medium
+,GH-DN-011,Verify error handling when clicking a broken or deleted repository link,TC-GH-DN-011,A repository link was previously saved/bookmarked but is now deleted,1. Click on the deleted repository link.,"GitHub should display a ""404 Repository Not Found"" message.",,Pass/Fail,A.Harini,High
+,GH-DN-012,"Verify that clicking ""Sign Out"" logs out the user and redirects to the login page",TC-GH-DN-012,User is logged into GitHub,"1. Click on the user avatar.
+2. Select ""Sign Out"".",The user should be logged out and redirected to the login page.,,Pass/Fail,A.Harini,High

@@ -1,0 +1,41 @@
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Project Name,Form Input Validation,,,,,,,,
+,Module Name,Form Fields & Input Validation,,,,,,,,
+,Created By,A.Harini,,,,,,,,
+,Created Date,12/3/2025,,,,,,,,
+,Peer Review By,A.Harini,,,,,,,,
+,Peer Review Date,12/3/2025,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,Scenario TID,Scenario Description,Test Case ID,Pre Conditioning,Steps To Execute,Expected Result,Actual Result,Status,Executed QA Name,Priority
+,FIV-001,Verify that mandatory fields cannot be left empty,TC-FIV-001,Form page is open,"1. Leave all mandatory fields empty.
+2. Click on ""Submit""",The system should display validation messages for mandatory fields.,,Pass/Fail,A.Harini,High
+,FIV-002,Verify that email field does not accept invalid email formats,TC-FIV-002,Form page is open,"1. Enter an invalid email (e.g:test@.com).
+2. Click ""Submit"".","Error message should appear: ""Please enter a valid email address.""",,Pass/Fail,A.Harini,High
+,FIV-003	,Verify that the password field enforces a strong password policy,TC-FIV-003,Form page is open,"1. Enter a weak password (e.g: 12345).
+2. Click ""Submit"".","Error message should appear: ""Password must be at least 8 characters long, with at least one uppercase letter, one number, and one special character.""",,Pass/Fail,A.Harini,High
+,FIV-004,Verify that special characters are not allowed in name fields,TC-FIV-004,Form page is open,"1. Enter special characters (e.g.@#$%^&*) in the name field.
+2. Click ""Submit"".","Error message should appear: ""Name cannot contain special characters.""	",,Pass/Fail,A.Harini,Medium
+,FIV-005,Verify that the phone number field only accepts numeric values,TC-FIV-005,Form page is open,"1. Enter alphabets/special characters in the phone number field.
+2. Click ""Submit"".","Error message should appear: ""Please enter a valid phone number.""",,Pass/Fail,A.Harini,High
+,FIV-006	,Verify input length validation for each field,TC-FIV-006,Form page is open,"1. Enter text exceeding the allowed character limit in each field.
+2. Click ""Submit"".","Error message should appear: ""Maximum character limit exceeded.""	",,Pass/Fail,A.Harini,Medium
+,FIV-007,"Verify that fields accept valid special characters where applicable (e.g., email, passwords)",TC-FIV-007,Form page is open,"1. Enter an email with a valid format (e.g: user.name@domain.com).
+2. Enter a password with special characters (e.g:Test@1234).
+3. Click ""Submit""",The form should accept valid input and submit successfully.	,,Pass/Fail,A.Harini,High
+,FIV-008,Verify that date fields do not accept invalid formats,TC-FIV-008,Form page is open,"1. Enter an invalid date format (e.g: 32-13-2025).
+2. Click ""Submit"".","Error message should appear: ""Please enter a valid date.""",,Pass/Fail,A.Harini,Medium
+,FIV-009,Verify that past dates are restricted in date of birth selection (if applicable),TC-FIV-009,Form page is open,"1. Select a future date for the Date of Birth field.
+2. Click ""Submit"".","Error message should appear: ""Date of birth cannot be in the future.""",,Pass/Fail,A.Harini,Medium
+,FIV-010,Verify that error messages disappear when valid input is provided,TC-FIV-010,Form page is open,"1. Enter invalid data to trigger an error message.
+2. Enter valid data.
+3. Click outside the field or on ""Submit"".",Error message should disappear.,,Pass/Fail,A.Harini,Low
+,FIV-011,Verify field behavior when autofill is used,TC-FIV-011,Browser autofill is enabled,"1. Use browser autofill to populate the form.
+2. Click ""Submit"".",The form should validate autofilled data properly.,,Pass/Fail,A.Harini,Low
+,FIV-012,Verify that JavaScript validation is active,TC-FIV-012,JavaScript enabled in the browser,1. Disable JavaScript and try submitting invalid input.,The client-side validation should not work.,,Pass/Fail,A.Harini,Low
+,FIV-013,Verify input sanitization against SQL injection,TC-FIV-013,Form page is open,"1. Enter SQL query in any text field (e.g:DROP TABLE users).
+2. Click ""Submit"".",The system should not execute the SQL and should show an error message.,,Pass/Fail,A.Harini,High
+,FIV-014,Verify input sanitization against XSS attacks,TC-FIV-014,Form page is open,"1. Enter <script>alert('XSS');</script> in any text field.
+2. Click ""Submit"".",The system should escape special characters and prevent XSS execution.,,Pass/Fail,A.Harini,High
